@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<title>Table ⇌ JSON</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Arun Sundaram" />
+	<meta name="description" content="Use JSON-to-Table to effortlessly import, export and edit arrays of JSON objects directly from the browser." />
+	<meta name="keywords" content="arun, sundaram, programmer, json, table, html, array, tool, browser" />
+	<meta name="viewport" description="width:device-width, initial-scale:1.0" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	
+	<section id="sidepanel">
+	
+		<h1>Table ⇌ JSON</h1>
+		
+			<Input type="text" id="json-in"></input>
+		<button onclick="JSONToTable()">JSON to Table</button>
+		
+		<br /> <br />
+		
+		<button onclick="updateJSON()">Generate JSON</button>
+		<textarea id="output"></textarea>
+		
+	
+	</section>
+	
+	<section id="tablepanel">
+		<table contenteditable="true">
+			<tbody contenteditable="true">
+				<tr><th id="addcol" onclick="promptCol()" contenteditable="false">+</th></tr>
+			</tbody>
+		</table>
+
+		<button id="addrow" onclick="addRow()">+</button>
+	
+	</section>
+	
+	<script type="text/javascript" src="json_builder.js"></script>
+</body>
+
+</html>
